@@ -1,5 +1,5 @@
 # mifare-classic-1k-generator
-This project makes it easier to quickly create valid keys for the Mifare Classic 1K.
+This project makes it easier to quickly create valid data dumps for the Mifare Classic 1K.
 
 
 Example output of bin file (read using xxd):
