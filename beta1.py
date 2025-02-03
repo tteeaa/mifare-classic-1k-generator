@@ -81,8 +81,8 @@ block4 = keyA + format(accessCondtions, '06x').upper() + format(undefinedByte, '
 block4 = [block4[j:j+2] for j in range(0, len(block4), 2)] # split into 2 characters each
 dataInString.append(block4) # add to array (end of sector 0)
 
-# Sectors 1-4 will be 0x00 with the last block being generic
-genericBlock = [
+# Blocks 1-4 will be 0x00 with the last block using generic f string keys
+genericSector = [
 "00000000000000000000000000000000",
 "00000000000000000000000000000000",
 "00000000000000000000000000000000",
@@ -90,7 +90,7 @@ genericBlock = [
 
 for s in range(15): # iterate through the sectors (1-15)
     for i in range(4): # iterate though blocks within the sector
-        block = [genericBlock[i][j:j+2] for j in range(0, len(genericBlock[i]), 2)] # split into 2 characters each
+        block = [genericSector[i][j:j+2] for j in range(0, len(genericSector[i]), 2)] # split into 2 characters each
         dataInString.append(block) # add to array  
 
 
