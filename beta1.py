@@ -1,5 +1,5 @@
 import random
-import binascii #
+import binascii
 
 
 dataInString = []
@@ -55,7 +55,7 @@ print("OEM: ", oem)
 uid = uid + oem # append the OEM data to the UID
 dataInString.append(uid) # first line for hex string array making up data of the key
 
-# Fist line is finished, now to space it apart for correct formatting
+# First line is finished, now to space it apart for correct formatting
 newDataInString = []
 for i in dataInString:
     i = [i[j:j+2] for j in range(0, len(i), 2)]
